@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:twitter/screens/sample/auth/login_screen.dart';
+import 'package:twitter/widgets/button.dart';
+import 'package:twitter/widgets/button_primary.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.title}) : super(key: key);
@@ -19,6 +22,14 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('body'),
+            ButtonPrimary(
+              text: 'Login',
+              onPress: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                  return LoginScreen();
+                }));
+              },
+            )
           ],
         ),
       ),
